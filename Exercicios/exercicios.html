@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+</head>
+<body>
+        <ons-page>
+                <ons-toolbar>
+                  <div class="center">Home</div>
+                </ons-toolbar>
+                <ons-page>
+                <ons-toolbar>
+                    <div class="center">Listas</div>
+                </ons-toolbar>
+
+              
+                <ons-tabbar swipeable position="auto">
+                  <ons-tab page="home.html" label="home 1" icon="ion-home, material:md-home" badge="7" active>
+                  </ons-tab>
+                  <ons-tab page="adicionar.html" label="adicionar" icon="md-settings" active-icon="md-face">
+                  </ons-tab>
+                  <ons-tab page="contactar.html" label="Tab 3" icon="md-settings" active-icon="md-face">
+                    </ons-tab>
+                </ons-tabbar>
+              </ons-page>
+
+                 
+              <template id="home.html">
+                <ons-page id="home">
+                        <ons-list-item>Item A</ons-list-item>
+                        <ons-list-item>Item B</ons-list-item>
+                        <ons-icon icon="md-face" class="list-item__icon"></ons-icon>
+                  <p style="text-align: center;">
+                  </p>
+                </ons-page>
+              </template>
+              
+              <template id="adicionar.html">
+                <ons-page id="adicionar">
+                        <div style="text-align: center; margin-top: 30px;">
+                                <p>
+                                  <ons-input id="username" modifier="underbar" placeholder="Username" float></ons-input>
+                                </p>
+                                <p>
+                                  <ons-input id="adicionar" modifier="underbar" placeholder="Username" float></ons-input>
+                                </p>
+                                <p style="margin-top: 30px;">
+                                  <ons-button onclick="adicionar()">Sign in</ons-button>
+                                </p>
+                              </div>
+                  <p style="text-align: center;">
+                    
+                  </p>
+                </ons-page>
+              </template>
+
+              <template id="contactar.html">
+                    <ons-page id="contactar">
+                      <p style="text-align: center;">
+                            <form action="/action_page.php" autocomplete="on">
+                                First name:<ons-input float placelder="name"><br>
+                                Last name: <ons-input type="text" name="lastname"><br>
+                                E-mail: <ons-input type="email" name="email" autocomplete="off"><br>
+                                <ons-button onclick="submit()">
+                              </form>
+                      </p>
+                    </ons-page>
+                  </template>
+
+</body>
+<script>
+        document.addEventListener('prechange', function(event) {
+      document.querySelector('ons-toolbar .center')
+        .innerHTML = event.tabItem.getAttribute('label');
+    });
+    </script>
+
+</html>

@@ -1,0 +1,38 @@
+$red:red;
+
+.box {
+    border: 1px solid $red;
+}
+
+.foo {
+    background: blue; }
+  
+   p {
+      color: blue;
+      font-size: 14px;
+      font-weight: bold; 
+}
+
+html {
+    font-size: 1/2em; 
+}
+
+%user-dialog-box { 
+    border: 10px solid gray;
+    padding: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); 
+}
+.user-dialog-box{
+    @extend %user-dialog-box;
+
+} 
+
+.alert-winning-user{
+    @extend %user-dialog-box;
+}
+
+@mixin alert-winning-user {
+    border: 10px solid black;
+    padding: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}

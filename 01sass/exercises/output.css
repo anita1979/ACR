@@ -1,0 +1,52 @@
+.box {
+<<<<<<< HEAD
+  border: 1px solid red;
+}
+
+.foo {
+  background: blue;
+}
+
+p {
+  color: blue;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+html {
+  font-size: 1/2em;
+}
+
+.alert-winning-user, .user-dialog-box {
+  border: 10px solid gray;
+  padding: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+=======
+  border: 1px solid #ccc; }
+
+.foo {
+  background: orange; }
+  .foo p {
+    color: blue;
+    font-size: 14px;
+    font-weight: bold; }
+
+html {
+  font-size: 0.5em; }
+
+.user-dialog-box, .alert-winning-user {
+  border: 10px solid white;
+  padding: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); }
+
+.alert-winning-user {
+  border-color: white; }
+
+.alert-winning-user {
+  border: 10px solid green;
+  padding: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); }
+>>>>>>> 66e8c0419e95754392121eaac55826246bea17b5
+
+/*# sourceMappingURL=output.css.map */
